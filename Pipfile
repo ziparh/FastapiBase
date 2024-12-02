@@ -9,6 +9,8 @@ pydantic = "*"
 pydantic-settings = "*"
 uvicorn = "*"
 sqlalchemy = "*"
+alembic = "*"
+black = "*"
 
 [dev-packages]
 
