@@ -5,6 +5,9 @@ class RunConfig(BaseModel):
     host: str = '0.0.0.0'
     port: int = 8080
 
+class ApiPrefix(BaseModel):
+    api: str = "/api"
+
 class DataBaseSettings(BaseModel):
     url: str =  "sqlite+aiosqlite:///./api.db"
     echo: bool = True
@@ -15,6 +18,7 @@ class DataBaseSettings(BaseModel):
 
 class Settings(BaseSettings):
     run: RunConfig = RunConfig()
+    prefix: ApiPrefix = ApiPrefix()
     db: DataBaseSettings = DataBaseSettings()
 
 settings = Settings()
