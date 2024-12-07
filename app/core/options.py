@@ -24,6 +24,7 @@ class DataBaseSettings(BaseModel):
     }
 
 
+
 class Settings(BaseSettings):
     run: RunConfig = RunConfig()
     prefix: ApiPrefix = ApiPrefix()
