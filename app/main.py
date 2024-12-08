@@ -7,11 +7,11 @@ from core import db_manager
 
 
 @asynccontextmanager
-def lifespan(api: FastAPI):
+def lifespan(app: FastAPI):
     # start
     yield
     # shutdown
-    db_manager.dispone()
+    db_manager.dispose()
 
 
 app = FastAPI(lifespan=lifespan)

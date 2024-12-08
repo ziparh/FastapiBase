@@ -17,7 +17,7 @@ class DBManager:
             expire_on_commit=False,
         )
 
-    async def dispone(self):
+    async def dispose(self):
         await self.engine.dispose()
 
     async def get_session(self):
